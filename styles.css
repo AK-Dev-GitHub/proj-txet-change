@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* 背景のスクロールを防ぐ */
+  position: relative;
+}
+
+.container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9); /* 背景を少し透過させる */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  z-index: 1; /* 背景より前面に配置 */
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.output-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#outputText {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px; /* コピーボタンとの間隔を確保 */
+  flex-basis: 70%;
+  box-sizing: border-box;
+}
+
+#copyButton {
+  flex-shrink: 0;
+  flex-basis: 30%;
+  box-sizing: border-box;
+}
+
+#copyMessage {
+  margin-top: 10px;
+  color: green;
+  display: none;
+}
+
+#errorMessage {
+  margin-top: 10px;
+  color: red;
+  display: none;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg); /* 斜めに配置 */
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.1); /* 半透明に設定 */
+  white-space: nowrap; /* 改行を防ぐ */
+  pointer-events: none; /* クリックイベントを無効にする */
+  z-index: 0; /* コンテナの背面に配置 */
+  animation: float 20s infinite; /* アニメーションを適用 */
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(-100%);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(100%);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(-100%);
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字化けジェネレータ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 複数の背景文字を追加 -->
+    <div
+      class="background-text"
+      style="top: 10%; left: 20%; animation-delay: 0s"
+    >
+      繧ゅ§縺ｰ縺🥺ｒ繧医�縲�
+    </div>
+    <div
+      class="background-text"
+      style="top: 30%; left: 40%; animation-delay: 2s"
+    >
+      縺ゅ§縺ｰ縺代ｒ繧医�縲�
+    </div>
+    <div
+      class="background-text"
+      style="top: 50%; left: 60%; animation-delay: 4s"
+    >
+      繧ゅ§縺ｰ縺代ｒ繧🥺�縲�
+    </div>
+    <div
+      class="background-text"
+      style="top: 70%; left: 80%; animation-delay: 6s"
+    >
+      繧ゅ§縺ｰ縺代ｒ繧医�縲�
+    </div>
+    <div
+      class="background-text"
+      style="top: 90%; left: 20%; animation-delay: 8s"
+    >
+      繧ゅ§縺ｰ縺代ｒ繧医�縲�
+    </div>
+
+    <div class="container">
+      <h1>文字化けジェネレータ</h1>
+      <textarea id="inputText" placeholder="ここにテキストを入力"></textarea>
+      <button id="generateButton">生成</button>
+      <div class="output-container">
+        <div id="outputText"></div>
+        <button id="copyButton">コピー</button>
+      </div>
+      <div id="copyMessage">コピーされました！</div>
+      <div id="errorMessage">文字が生成されていません。</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
