@@ -1,4 +1,3 @@
-//
 document.getElementById('inputText').addEventListener('input', () => {
   const inputText = document.getElementById('inputText').value;
   const generateButton = document.getElementById('generateButton');
@@ -7,7 +6,6 @@ document.getElementById('inputText').addEventListener('input', () => {
   resetButton.disabled = inputText.trim() === '';
 });
 
-// 生成ボタンを押下した場合の処理
 document.getElementById('generateButton').addEventListener('click', () => {
   const inputText = document.getElementById('inputText').value;
   const outputText = document.getElementById('outputText');
@@ -15,8 +13,6 @@ document.getElementById('generateButton').addEventListener('click', () => {
   document.getElementById('copyButton').disabled = false; // コピーボタンを活性化
 });
 
-// コピーボタンを押下した場合の処理
-document.getElementById('copyButton').addEventListener('click', () => {
 document.getElementById('copyButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
   navigator.clipboard.writeText(outputText).then(() => {
