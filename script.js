@@ -25,7 +25,7 @@ document.getElementById('copyButton').addEventListener('click', () => {
 });
 
 function generateRandomMojibake(text) {
-  const mojibakeChars = '繧ゅ§縺ｰ縺代ｒ繧医�縲�';
+  const mojibakeChars = '！繧ゅ§縺ｰ縺代ｒ繧医�縲�殺肉';
   let result = '';
   for (let i = 0; i < text.length; i++) {
     // ランダムに文字を選択
