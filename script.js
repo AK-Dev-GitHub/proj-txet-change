@@ -1,3 +1,4 @@
+// 
 document.getElementById('inputText').addEventListener('input', () => {
   const inputText = document.getElementById('inputText').value;
   const generateButton = document.getElementById('generateButton');
@@ -6,6 +7,7 @@ document.getElementById('inputText').addEventListener('input', () => {
   resetButton.disabled = inputText.trim() === '';
 });
 
+// 生成ボタンを押下した場合の処理
 document.getElementById('generateButton').addEventListener('click', () => {
   const inputText = document.getElementById('inputText').value;
   const outputText = document.getElementById('outputText');
@@ -13,6 +15,7 @@ document.getElementById('generateButton').addEventListener('click', () => {
   document.getElementById('copyButton').disabled = false; // コピーボタンを活性化
 });
 
+// コピーボタンを押下した場合の処理
 document.getElementById('copyButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
   navigator.clipboard.writeText(outputText).then(() => {
@@ -24,6 +27,7 @@ document.getElementById('copyButton').addEventListener('click', () => {
   });
 });
 
+// リセットボタンを押下した場合の処理
 document.getElementById('resetButton').addEventListener('click', () => {
   document.getElementById('inputText').value = '';
   document.getElementById('outputText').textContent = '';
@@ -32,6 +36,7 @@ document.getElementById('resetButton').addEventListener('click', () => {
   document.getElementById('resetButton').disabled = true;
 });
 
+// ランダムな文字列を生成する関数
 function generateRandomMojibake(text) {
   const mojibakeChars = '！繧ゅ§縺ｰ縺代ｒ繧医�縲�殺肉';
   let result = '';

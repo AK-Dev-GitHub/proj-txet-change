@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ヘッダーを追加 -->
+    <!--headerエリア -->
     <header>
       <a
         href="https://github.com/AK-Dev-GitHub/proj-txet-change"
@@ -24,7 +24,7 @@
       </a>
     </header>
 
-    <!-- 複数の背景文字を追加 -->
+    <!-- 背景文字エリア -->
     <div
       class="background-text"
       style="top: 10%; left: 20%; animation-delay: 0s"
@@ -56,15 +56,20 @@
       繧ゅ§縺ｰ縺代ｒ繧医�縲�
     </div>
 
+    <!-- メインコンテナ -->
     <div class="container">
       <h1>文字化けジェネレータ</h1>
-      <input type="text" id="inputText" placeholder="ここにテキストを入力" />
+      <input type="text" id="inputText" placeholder="文字を入力してね！！" />
       <button id="generateButton" disabled>生成</button>
+
+      <!-- 出力コンテナエリア -->
       <div class="output-container">
         <div id="outputText"></div>
         <button id="copyButton" disabled>コピー</button>
         <button id="resetButton" disabled>リセット</button>
       </div>
+
+      <!-- コピーメッセージ -->
       <div id="copyMessage">コピーされました！</div>
     </div>
     <script src="script.js"></script>
