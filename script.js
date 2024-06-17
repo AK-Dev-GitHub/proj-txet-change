@@ -1,4 +1,4 @@
-// 
+//
 document.getElementById('inputText').addEventListener('input', () => {
   const inputText = document.getElementById('inputText').value;
   const generateButton = document.getElementById('generateButton');
@@ -19,11 +19,13 @@ document.getElementById('generateButton').addEventListener('click', () => {
 document.getElementById('copyButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
   navigator.clipboard.writeText(outputText).then(() => {
+    console.log('copyMessage', copyMessage);
     const copyMessage = document.getElementById('copyMessage');
+    console.log('copyMessage', copyMessage);
     copyMessage.style.display = 'block';
     setTimeout(() => {
       copyMessage.style.display = 'none';
-    }, 4000); // 2秒後にメッセージを非表示にする
+    }, 2000); // 2秒後にメッセージを非表示にする
   });
 });
 
@@ -34,6 +36,11 @@ document.getElementById('resetButton').addEventListener('click', () => {
   document.getElementById('generateButton').disabled = true;
   document.getElementById('copyButton').disabled = true;
   document.getElementById('resetButton').disabled = true;
+  const resetMessage = document.getElementById('resetMessage');
+  resetMessage.style.display = 'block';
+  setTimeout(() => {
+    resetMessage.style.display = 'none';
+  }, 2000); // 2秒後にメッセージを非表示にする
 });
 
 // ランダムな文字列を生成する関数

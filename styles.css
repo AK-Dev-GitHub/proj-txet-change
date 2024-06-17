@@ -16,7 +16,7 @@ header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
-  justify-content: flex-start; /* 左寄せ */
+  justify-content: flex-end; /* 左寄せ */
   align-items: center; /* アイコンの位置を揃える */
   padding: 10px 20px;
   z-index: 2; /* 背景より前面に配置 */
@@ -106,6 +106,12 @@ button:disabled {
 #copyMessage {
   margin-top: 10px;
   color: green;
+  display: none;
+}
+
+#resetMessage {
+  margin-top: 10px;
+  color: red;
   display: none;
 }
 
