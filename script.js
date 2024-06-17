@@ -17,11 +17,10 @@ document.getElementById('generateButton').addEventListener('click', () => {
 
 // コピーボタンを押下した場合の処理
 document.getElementById('copyButton').addEventListener('click', () => {
+document.getElementById('copyButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
   navigator.clipboard.writeText(outputText).then(() => {
-    console.log('copyMessage', copyMessage);
     const copyMessage = document.getElementById('copyMessage');
-    console.log('copyMessage', copyMessage);
     copyMessage.style.display = 'block';
     setTimeout(() => {
       copyMessage.style.display = 'none';
