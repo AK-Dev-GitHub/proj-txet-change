@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- ヘッダーを追加 -->
+    <header>
+      <a
+        href="https://github.com/AK-Dev-GitHub/proj-txet-change"
+        target="_blank"
+      >
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          alt="GitHub"
+          class="header-icon"
+        />
+      </a>
+      <a href="https://zenn.dev/milk_code" target="_blank">
+        <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
+      </a>
+    </header>
+
     <!-- 複数の背景文字を追加 -->
     <div
       class="background-text"
@@ -41,14 +58,14 @@
 
     <div class="container">
       <h1>文字化けジェネレータ</h1>
-      <textarea id="inputText" placeholder="ここにテキストを入力"></textarea>
-      <button id="generateButton">生成</button>
+      <input type="text" id="inputText" placeholder="ここにテキストを入力" />
+      <button id="generateButton" disabled>生成</button>
       <div class="output-container">
         <div id="outputText"></div>
-        <button id="copyButton">コピー</button>
+        <button id="copyButton" disabled>コピー</button>
+        <button id="resetButton" disabled>リセット</button>
       </div>
       <div id="copyMessage">コピーされました！</div>
-      <div id="errorMessage">文字が生成されていません！</div>
     </div>
     <script src="script.js"></script>
   </body>

@@ -1,27 +1,35 @@
+document.getElementById('inputText').addEventListener('input', () => {
+  const inputText = document.getElementById('inputText').value;
+  const generateButton = document.getElementById('generateButton');
+  const resetButton = document.getElementById('resetButton');
+  generateButton.disabled = inputText.trim() === '';
+  resetButton.disabled = inputText.trim() === '';
+});
+
 document.getElementById('generateButton').addEventListener('click', () => {
   const inputText = document.getElementById('inputText').value;
   const outputText = document.getElementById('outputText');
   outputText.textContent = generateRandomMojibake(inputText);
-  document.getElementById('errorMessage').style.display = 'none'; // エラーメッセージを非表示にする
+  document.getElementById('copyButton').disabled = false; // コピーボタンを活性化
 });
 
 document.getElementById('copyButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
-  if (outputText === '') {
-    const errorMessage = document.getElementById('errorMessage');
-    errorMessage.style.display = 'block';
+  navigator.clipboard.writeText(outputText).then(() => {
+    const copyMessage = document.getElementById('copyMessage');
+    copyMessage.style.display = 'block';
     setTimeout(() => {
-      errorMessage.style.display = 'none';
-    }, 2000); // 2秒後にエラーメッセージを非表示にする
-  } else {
-    navigator.clipboard.writeText(outputText).then(() => {
-      const copyMessage = document.getElementById('copyMessage');
-      copyMessage.style.display = 'block';
-      setTimeout(() => {
-        copyMessage.style.display = 'none';
-      }, 2000); // 2秒後にメッセージを非表示にする
-    });
-  }
+      copyMessage.style.display = 'none';
+    }, 4000); // 2秒後にメッセージを非表示にする
+  });
+});
+
+document.getElementById('resetButton').addEventListener('click', () => {
+  document.getElementById('inputText').value = '';
+  document.getElementById('outputText').textContent = '';
+  document.getElementById('generateButton').disabled = true;
+  document.getElementById('copyButton').disabled = true;
+  document.getElementById('resetButton').disabled = true;
 });
 
 function generateRandomMojibake(text) {
