@@ -9,6 +9,13 @@
   <body>
     <!--headerエリア -->
     <header>
+      <a href="ranking.html" target="_blank"
+        ><img
+          src="icon/undoukai_trophy_gold.png"
+          alt="ranking"
+          class="header-icon"
+      /></a>
+      <!-- GitHub -->
       <a
         href="https://github.com/AK-Dev-GitHub/proj-txet-change"
         target="_blank"
@@ -18,6 +25,7 @@
           alt="GitHub"
           class="header-icon"
         />
+        <!-- Zenn -->
       </a>
       <a href="https://zenn.dev/milk_code" target="_blank">
         <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
@@ -59,19 +67,25 @@
     <!-- メインコンテナ -->
     <div class="container">
       <h1>文字化けジェネレータ</h1>
-      <input type="text" id="inputText" placeholder="文字を入力してね！！" />
-      <button id="generateButton" disabled>生成</button>
+      <div class="input-group">
+        <input type="text" id="inputText" placeholder="文字を入力してね！！" />
+        <button id="generateButton" disabled>生成</button>
+      </div>
 
       <!-- 出力コンテナエリア -->
       <div class="output-container">
         <div id="outputText"></div>
-        <button id="copyButton" disabled>コピー</button>
-        <button id="resetButton" disabled>リセット</button>
+        <div class="button-group">
+          <button id="copyButton" disabled>コピー</button>
+          <button id="resetButton" disabled>リセット</button>
+          <button id="restoreButton" disabled>文字化け解除</button>
+        </div>
       </div>
 
       <!-- ボタン押下時のメッセージ -->
       <div id="copyMessage">コピーされました！</div>
       <div id="resetMessage">リセットしました！</div>
+      <div id="restoreMessage">文字化けを解除しました！</div>
     </div>
     <script src="script.js"></script>
   </body>

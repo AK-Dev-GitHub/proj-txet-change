@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden; /* 背景のスクロールを防ぐ */
+  overflow: hidden;
   position: relative;
 }
 
@@ -16,10 +16,10 @@ header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
-  justify-content: flex-end; /* 左寄せ */
-  align-items: center; /* アイコンの位置を揃える */
+  justify-content: flex-end;
+  align-items: center;
   padding: 10px 20px;
-  z-index: 2; /* 背景より前面に配置 */
+  z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,18 +37,25 @@ header {
 
 .container {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.9); /* 背景を少し透過させる */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 100%;
+  max-width: 380px;
   text-align: center;
-  z-index: 1; /* 背景より前面に配置 */
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
 }
 
 input {
-  width: 100%;
-  height: 30px;
+  flex-grow: 1;
+  height: 40px;
   margin-bottom: 20px;
   padding: 5px;
   font-size: 16px;
@@ -59,10 +66,13 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
+  height: 40px;
+  margin-bottom: 20px;
   border-radius: 5px;
   cursor: pointer;
-  white-space: nowrap; /* テキストの改行を防ぐ */
+  white-space: nowrap;
+  margin-left: 10px;
 }
 
 button:hover {
@@ -75,11 +85,12 @@ button:disabled {
 }
 
 #resetButton:hover:enabled {
-  background-color: #cc0000; /* 濃い赤色 */
+  background-color: #cc0000;
 }
 
 .output-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
@@ -90,42 +101,53 @@ button:disabled {
   flex-grow: 1;
   border: 1px solid #ccc;
   padding: 10px;
-  margin-right: 10px; /* ボタンとの間隔を確保 */
-  flex-basis: 60%; /* サイズ調整 */
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-group button {
+  flex-grow: 1;
+  margin: 0 5px;
   box-sizing: border-box;
 }
 
-#copyButton,
-#resetButton {
-  flex-shrink: 0;
-  flex-basis: auto; /* サイズを自動調整 */
-  box-sizing: border-box;
-  margin-right: 10px; /* ボタン間の間隔を確保 */
+#copyMessage,
+#resetMessage,
+#restoreMessage {
+  margin-top: 10px;
+  display: none;
 }
 
 #copyMessage {
-  margin-top: 10px;
   color: green;
-  display: none;
 }
 
 #resetMessage {
-  margin-top: 10px;
   color: red;
-  display: none;
+}
+
+#restoreMessage {
+  color: blue;
 }
 
 .background-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg); /* 斜めに配置 */
+  transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 80px;
-  color: rgba(0, 0, 0, 0.1); /* 半透明に設定 */
-  white-space: nowrap; /* 改行を防ぐ */
-  pointer-events: none; /* クリックイベントを無効にする */
-  z-index: 0; /* コンテナの背面に配置 */
-  animation: float 20s infinite; /* アニメーションを適用 */
+  color: rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 20s infinite;
 }
 
 @keyframes float {
@@ -138,4 +160,65 @@ button:disabled {
   100% {
     transform: translate(-50%, -50%) rotate(-45deg) translateY(-100%);
   }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    margin: 5px 0;
+  }
+}
+
+/* 文字化け人気ランキング用のCSS */
+.ranking-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.like-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.like-button:hover {
+  background-color: #0056b3;
 }
