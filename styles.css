@@ -11,22 +11,32 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.header-logo {
+  width: 300px;
+  height: 30px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
 .header-icon {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .header-icon img {
@@ -46,6 +56,7 @@ header {
   text-align: center;
   z-index: 1;
   box-sizing: border-box;
+  margin-top: 100px; /* ヘッダーとの重なりを防ぐ */
 }
 
 .input-group {
@@ -120,7 +131,8 @@ button:disabled {
 
 #copyMessage,
 #resetMessage,
-#restoreMessage {
+#restoreMessage,
+#decodeMessage {
   margin-top: 10px;
   display: none;
 }
@@ -135,6 +147,10 @@ button:disabled {
 
 #restoreMessage {
   color: blue;
+}
+
+#decodeMessage {
+  color: purple;
 }
 
 .background-text {
@@ -190,35 +206,53 @@ button:disabled {
   }
 }
 
-/* 文字化け人気ランキング用のCSS */
-.ranking-container {
-  background-color: rgba(255, 255, 255, 0.9);
+/* モーダルスタイル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 500px;
-  margin: 20px auto;
-  text-align: center;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
 }
 
-.ranking-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.like-button {
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#okButton {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 5px;
+  white-space: nowrap;
 }
 
-.like-button:hover {
+#okButton:hover {
   background-color: #0056b3;
 }

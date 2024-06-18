@@ -9,27 +9,35 @@
   <body>
     <!--headerエリア -->
     <header>
-      <a href="ranking.html" target="_blank"
-        ><img
-          src="icon/undoukai_trophy_gold.png"
-          alt="ranking"
-          class="header-icon"
-      /></a>
-      <!-- GitHub -->
-      <a
-        href="https://github.com/AK-Dev-GitHub/proj-txet-change"
-        target="_blank"
-      >
-        <img
-          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-          alt="GitHub"
-          class="header-icon"
-        />
-        <!-- Zenn -->
-      </a>
-      <a href="https://zenn.dev/milk_code" target="_blank">
-        <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
-      </a>
+      <img
+        src="icon/MainLogo.png"
+        alt="文字化けジェネレータ ロゴ"
+        class="header-logo"
+      />
+      <div class="header-icons">
+        <!-- GitHubアイコン -->
+        <a
+          href="https://github.com/AK-Dev-GitHub/proj-txet-change"
+          target="_blank"
+        >
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub"
+            class="header-icon"
+          />
+        </a>
+        <!-- Zennアイコン -->
+        <a href="https://zenn.dev/milk_code" target="_blank">
+          <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
+        </a>
+        <!-- トロフィーアイコン -->
+        <a href="ranking.html" target="_blank"
+          ><img
+            src="icon/undoukai_trophy_gold.png"
+            alt="ranking"
+            class="header-icon"
+        /></a>
+      </div>
     </header>
 
     <!-- 背景文字エリア -->
@@ -79,6 +87,7 @@
           <button id="copyButton" disabled>コピー</button>
           <button id="resetButton" disabled>リセット</button>
           <button id="restoreButton" disabled>文字化け解除</button>
+          <button id="decodeButton" disabled>解読</button>
         </div>
       </div>
 
@@ -86,7 +95,25 @@
       <div id="copyMessage">コピーされました！</div>
       <div id="resetMessage">リセットしました！</div>
       <div id="restoreMessage">文字化けを解除しました！</div>
+      <div id="decodeMessage">解読しました！</div>
     </div>
+
+    <!-- エンコード情報モーダル -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>エンコード情報</h2>
+        <p>以下の文字エンコード方式に対応しています：</p>
+        <ul>
+          <li>UTF-8</li>
+          <li>Shift_JIS</li>
+          <li>ISO-2022-JP</li>
+          <li>EUC-JP</li>
+        </ul>
+        <button id="okButton">OK</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
