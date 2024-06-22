@@ -112,6 +112,6 @@ function decodeMojibake(mojibakeText) {
     return utf8String;
   } catch (e) {
     console.error('Decoding error:', e);
-    return '解読エラー';
+    return '解読できませんでした(´;ω;｀)';
   }
 }
