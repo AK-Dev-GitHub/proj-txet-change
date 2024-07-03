@@ -45,16 +45,6 @@ document.getElementById('resetButton').addEventListener('click', () => {
   }, 2000);
 });
 
-document.getElementById('restoreButton').addEventListener('click', () => {
-  const inputText = document.getElementById('inputText').value;
-  document.getElementById('outputText').textContent = inputText;
-  const restoreMessage = document.getElementById('restoreMessage');
-  restoreMessage.style.display = 'block';
-  setTimeout(() => {
-    restoreMessage.style.display = 'none';
-  }, 2000);
-});
-
 document.getElementById('decodeButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
   const decodedText = decodeMojibake(outputText);
