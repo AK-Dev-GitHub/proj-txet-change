@@ -2,12 +2,11 @@ document.getElementById('inputText').addEventListener('input', () => {
   const inputText = document.getElementById('inputText').value;
   const generateButton = document.getElementById('generateButton');
   const resetButton = document.getElementById('resetButton');
-  const restoreButton = document.getElementById('restoreButton');
   const decodeButton = document.getElementById('decodeButton');
   generateButton.disabled = inputText.trim() === '';
   resetButton.disabled = inputText.trim() === '';
-  restoreButton.disabled = inputText.trim() === '';
   decodeButton.disabled = inputText.trim() === '';
+  document.getElementById('decodeButton').disabled = true;
 });
 
 document.getElementById('generateButton').addEventListener('click', () => {
@@ -15,7 +14,6 @@ document.getElementById('generateButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText');
   outputText.textContent = generateRandomMojibake(inputText);
   document.getElementById('copyButton').disabled = false;
-  document.getElementById('restoreButton').disabled = false;
   document.getElementById('decodeButton').disabled = false;
 });
 
@@ -30,13 +28,14 @@ document.getElementById('copyButton').addEventListener('click', () => {
   });
 });
 
+// リセットボタン押下後の処理
 document.getElementById('resetButton').addEventListener('click', () => {
   document.getElementById('inputText').value = '';
   document.getElementById('outputText').textContent = '';
+  // 各ボタンを非活性化
   document.getElementById('generateButton').disabled = true;
   document.getElementById('copyButton').disabled = true;
   document.getElementById('resetButton').disabled = true;
-  document.getElementById('restoreButton').disabled = true;
   document.getElementById('decodeButton').disabled = true;
   const resetMessage = document.getElementById('resetMessage');
   resetMessage.style.display = 'block';
@@ -47,8 +46,6 @@ document.getElementById('resetButton').addEventListener('click', () => {
 
 document.getElementById('decodeButton').addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
-  const decodedText = decodeMojibake(outputText);
-  document.getElementById('outputText').textContent = decodedText;
 
   // モーダルを表示
   const modal = document.getElementById('modal');
@@ -63,6 +60,8 @@ document.getElementById('decodeButton').addEventListener('click', () => {
   // OKボタンをクリックしたときの処理
   const okButton = document.getElementById('okButton');
   okButton.onclick = function () {
+    const decodedText = decodeMojibake(outputText);
+    document.getElementById('outputText').textContent = decodedText;
     modal.style.display = 'none';
     const decodeMessage = document.getElementById('decodeMessage');
     decodeMessage.style.display = 'block';
@@ -90,7 +89,7 @@ function generateRandomMojibake(text) {
   return result;
 }
 
-// 文字化けをデコードする関数
+// デコードする関数
 function decodeMojibake(mojibakeText) {
   try {
     // 文字化けしたテキストをバイト配列に変換
