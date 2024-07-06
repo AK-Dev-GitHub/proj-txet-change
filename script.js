@@ -78,6 +78,19 @@ document.getElementById('decodeButton').addEventListener('click', () => {
   };
 });
 
+document.getElementById('twitterLink').addEventListener('click', () => {
+  const text =
+    '文字化けジェネレータで生成した文字化け: ' +
+    document.getElementById('outputText').textContent;
+  const url =
+    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+  window.open(url, '_blank');
+});
+
+document.getElementById('backButton').addEventListener('click', () => {
+  window.location.href = 'index.html';
+});
+
 function generateRandomMojibake(text) {
   const mojibakeChars = '！繧ゅ§縺ｰ縺代ｒ繧医�縲�殺肉';
   let result = '';
