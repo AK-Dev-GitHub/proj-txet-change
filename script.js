@@ -78,6 +78,7 @@ document.getElementById('decodeButton').addEventListener('click', () => {
   };
 });
 
+// Xにポスト
 document.getElementById('twitterLink').addEventListener('click', () => {
   const text =
     '文字化けジェネレータで生成した文字化け: ' +
@@ -87,6 +88,7 @@ document.getElementById('twitterLink').addEventListener('click', () => {
   window.open(url, '_blank');
 });
 
+// ランキングページ戻るボタン
 document.getElementById('backButton').addEventListener('click', () => {
   window.location.href = 'index.html';
 });

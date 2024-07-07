@@ -24,6 +24,7 @@ header {
 }
 
 .header-logo {
+  margin-left: 15px;
   width: 280px;
   height: 30px;
 }
@@ -39,9 +40,15 @@ header {
   height: 30px;
 }
 
+.x-icon {
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+}
+
 .header-version {
   margin-left: 5px;
-  font-size: 14px;
+  font-size: 20px;
   color: #333;
 }
 
@@ -204,7 +211,7 @@ button:disabled {
   }
 }
 
-/* モーダルのスタイル */
+/* デコードモーダルのスタイル */
 .modal {
   display: none; /* モーダルは初期状態では表示しない */
   position: fixed;
