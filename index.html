@@ -6,12 +6,6 @@
     <title>文字化けジェネレータ</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="icon/favicon.ico" />
-    <!-- Google Fonts -->
-    <!-- Link to the Google Fonts you've selected -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    />
   </head>
   <body>
     <!--headerエリア -->
@@ -75,14 +69,8 @@
     >
       繧ゅ§縺ｰ縺代ｒ繧医�縲
     </div>
-    <div
-      class="background-text"
-      style="top: 90%; left: 20%; animation-delay: 8s"
-    >
-      繧ゅ§縺ｰ縺代ｒ繧医�縲
-    </div>
 
-    <!-- メインコンテナ -->
+    <!-- 文字化け生成カード -->
     <div class="container">
       <h1>文字化けジェネレータ</h1>
       <div class="input-group">
@@ -118,3 +106,160 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<style>
+  /* 文字化け生成カードのスタイル */
+  .container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    box-sizing: border-box;
+    margin-top: 100px; /* ヘッダーとの重なりを防ぐ */
+  }
+
+  /* 文字化け生成入力エリア */
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  /* 文字化け生成入力蘭 */
+  input {
+    flex-grow: 1;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  /* 文字化け出力結果エリア*/
+  .output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 文字化け出力結果蘭 */
+  #outputText {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* ボタンStyle */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+
+  /* ボタン押下メッセージ */
+  #copyMessage,
+  #resetMessage,
+  #restoreMessage,
+  #decodeMessage {
+    margin-top: 10px;
+    display: none;
+  }
+
+  #resetMessage {
+    color: red;
+  }
+
+  #restoreMessage {
+    color: blue;
+  }
+
+  #decodeMessage {
+    color: purple;
+  }
+
+  #copyMessage {
+    color: green;
+  }
+
+  /* ボタンマウスオーバー関連Style */
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  #resetButton:hover:enabled {
+    background-color: #cc0000;
+  }
+
+  /* コピー/リセット/デコードボタンの位置Style */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .button-group button {
+    flex-grow: 1;
+    margin: 0 5px;
+    box-sizing: border-box;
+  }
+
+  /* デコードモーダルのStyle */
+  .modal {
+    display: none; /* モーダルは初期状態では表示しない */
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>

@@ -10,6 +10,7 @@ body {
   position: relative;
 }
 
+/* headerエリア */
 header {
   position: fixed;
   top: 0;
@@ -52,120 +53,17 @@ header {
   color: #333;
 }
 
-.container {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-  box-sizing: border-box;
-  margin-top: 100px; /* ヘッダーとの重なりを防ぐ */
-}
 
-.input-group {
-  display: flex;
-  align-items: center;
-}
 
-input {
-  flex-grow: 1;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 5px;
-  font-size: 16px;
-  box-sizing: border-box;
-}
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  height: 40px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  white-space: nowrap;
-  margin-left: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-#resetButton:hover:enabled {
-  background-color: #cc0000;
-}
-
-.output-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-#outputText {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  flex-grow: 1;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.button-group button {
-  flex-grow: 1;
-  margin: 0 5px;
-  box-sizing: border-box;
-}
-
-#copyMessage,
-#resetMessage,
-#restoreMessage,
-#decodeMessage {
-  margin-top: 10px;
-  display: none;
-}
-
-#copyMessage {
-  color: green;
-}
-
-#resetMessage {
-  color: red;
-}
-
-#restoreMessage {
-  color: blue;
-}
-
-#decodeMessage {
-  color: purple;
-}
-
+/* 背景文字のStyle */
 .background-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 80px;
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   pointer-events: none;
   z-index: 0;
@@ -211,42 +109,4 @@ button:disabled {
   }
 }
 
-/* デコードモーダルのスタイル */
-.modal {
-  display: none; /* モーダルは初期状態では表示しない */
-  position: fixed;
-  z-index: 3;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
-}
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
