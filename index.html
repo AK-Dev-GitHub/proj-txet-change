@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>文字化けジェネレータ</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="global.css" />
     <link rel="icon" href="icon/favicon.ico" />
   </head>
   <body>
@@ -17,6 +17,7 @@
       />
       <div class="header-icons">
         <span class="header-version">Ver.2.0.2</span>
+        <a href="about.html"> About </a>
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -27,17 +28,10 @@
             class="header-icon"
           />
         </a>
-        <!-- </a> -->
         <a href="https://zenn.dev/milk_code" target="_blank">
           <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
         </a>
-        <a href="ranking.html">
-          <img
-            src="icon/undoukai_trophy_gold.png"
-            alt="ranking"
-            class="header-icon"
-          />
-        </a>
+
         <a id="twitterLink" href="#">
           <img src="icon/logo-black.png" alt="Twitter" class="x-icon" />
         </a>
@@ -102,7 +96,10 @@
         <button id="okButton">OK</button>
       </div>
     </div>
-
+    <!-- フッターエリア -->
+    <footer class="footer">
+      &copy; 2024 Mojibake Generator. All Rights Reserved.
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
@@ -159,7 +156,7 @@
 
   /* ボタンStyle */
   button {
-    background-color: #007bff;
+    background-color: #5d7dc0;
     color: white;
     border: none;
     padding: 10px;
@@ -181,11 +178,7 @@
   }
 
   #resetMessage {
-    color: red;
-  }
-
-  #restoreMessage {
-    color: blue;
+    color: #c15c79;
   }
 
   #decodeMessage {
@@ -198,7 +191,7 @@
 
   /* ボタンマウスオーバー関連Style */
   button:hover {
-    background-color: #0056b3;
+    background-color: #a7b8dd;
   }
 
   button:disabled {
@@ -207,7 +200,7 @@
   }
 
   #resetButton:hover:enabled {
-    background-color: #cc0000;
+    background-color: #c15c79;
   }
 
   /* コピー/リセット/デコードボタンの位置Style */

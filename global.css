@@ -1,6 +1,7 @@
+/* 背景 */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e9ecf5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +31,11 @@ header {
   height: 30px;
 }
 
+.header-version {
+  font-size: 16px;
+  color: #333;
+}
+
 .header-icons {
   display: flex;
   align-items: center;
@@ -42,19 +48,11 @@ header {
 }
 
 .x-icon {
+  /* xアイコンの左端予約を作るために定義 */
   margin-right: 20px;
   width: 30px;
   height: 30px;
 }
-
-.header-version {
-  margin-left: 5px;
-  font-size: 20px;
-  color: #333;
-}
-
-
-
 
 /* 背景文字のStyle */
 .background-text {
@@ -68,6 +66,27 @@ header {
   pointer-events: none;
   z-index: 0;
   animation: float 20s infinite;
+}
+
+/* footerエリア */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ae76a6;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* aタグのスタイル */
+a {
+  color: #5d7dc0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @keyframes float {
@@ -108,5 +127,3 @@ header {
     margin: 5px 0;
   }
 }
-
-

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字化けジェネレータの使い方</title>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <!--headerエリア -->
+    <header>
+      <img
+        src="icon/MainLogo.png"
+        alt="文字化けジェネレータ ロゴ"
+        class="header-logo"
+      />
+      <div class="header-icons">
+        <span class="header-version">Ver.2.0.2</span>
+        <a href="index.html"> Home </a>
+        <a
+          href="https://github.com/AK-Dev-GitHub/proj-txet-change"
+          target="_blank"
+        >
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub"
+            class="header-icon"
+          />
+        </a>
+        <a href="https://zenn.dev/milk_code" target="_blank">
+          <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
+        </a>
+        <a id="twitterLink" href="#">
+          <img src="icon/logo-black.png" alt="Twitter" class="x-icon" />
+        </a>
+      </div>
+    </header>
+
+    <div class="content">
+      <h1>文字化けジェネレータの使い方</h1>
+
+      <!-- 画像と説明を含むセクション -->
+      <div class="image-section">
+        <!-- 画像1 -->
+        <div class="image-container">
+          <img src="icon/about-page-img/20101_color.png" class="input-image" />
+          <h3>Step1</h3>
+          <p>文字を入力してみよう</p>
+        </div>
+
+        <!-- 画像2 -->
+        <div class="image-container">
+          <img src="icon/about-page-img/15349_color.png" class="input-image" />
+          <h3>Step2</h3>
+          <p>文字化けが出力</p>
+        </div>
+
+        <!-- 画像3 -->
+        <div class="image-container">
+          <img src="icon/about-page-img/11363_color.png" class="input-image" />
+          <h3>Step3</h3>
+          <p>「X」で文字化け生成結果をポスト</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッターエリア -->
+    <footer class="footer">
+      &copy; 2024 Mojibake Generator. All Rights Reserved.
+    </footer>
+  </body>
+
+  <style>
+    /* contentエリアにpaddingを追加して、headerとfooterに被らないようにする */
+    .content {
+      padding-top: 80px; /* headerの高さ分の余白 */
+      padding-bottom: 60px; /* footerの高さ分の余白 */
+      text-align: center;
+    }
+
+    .content h1 {
+      text-align: center;
+      margin-bottom: 150px; /* タイトルと画像エリアの間に余白を追加 */
+    }
+
+    /* 画像と説明文のレイアウトを調整するスタイル */
+    .image-section {
+      display: flex;
+      flex-wrap: wrap; /* ウィンドウサイズに応じて画像が折り返される */
+      justify-content: space-between;
+      gap: 20px; /* 画像間のスペース */
+      margin-top: 20px;
+      margin-bottom: 40px; /* 画像エリアの下に余白を追加 */
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 30%; /* 各コンテナの幅を調整 */
+    }
+
+    .input-image {
+      width: 100%;
+      height: auto;
+      max-width: 300px; /* 画像の最大幅を統一 */
+      max-height: 200px; /* 画像の最大高さを統一 */
+      object-fit: contain; /* アスペクト比を維持しながら全体が収まる */
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .image-container {
+        width: 45%; /* 画面が狭いときに画像サイズを調整 */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-container {
+        width: 100%; /* スマホサイズでは1列に表示 */
+      }
+    }
+  </style>
+</html>
