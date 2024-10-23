@@ -17,7 +17,8 @@
       />
       <div class="header-icons">
         <span class="header-version">Ver.2.0.2</span>
-        <a href="about.html"> About </a>
+        <a href="about.html"> 使い方 </a>
+        <a href="x-post.html"> みんなの文字化け </a>
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -29,11 +30,19 @@
           />
         </a>
         <a href="https://zenn.dev/milk_code" target="_blank">
-          <img src="icon/logo-only.svg" alt="Zenn" class="header-icon" />
+          <img
+            src="icon/header-icons/Zenn.svg"
+            alt="Zenn"
+            class="header-icon"
+          />
         </a>
 
         <a id="twitterLink" href="#">
-          <img src="icon/logo-black.png" alt="Twitter" class="x-icon" />
+          <img
+            src="icon/header-icons/X-icon.png"
+            alt="Twitter"
+            class="x-icon"
+          />
         </a>
       </div>
     </header>
@@ -100,7 +109,7 @@
     <footer class="footer">
       &copy; 2024 Mojibake Generator. All Rights Reserved.
     </footer>
-    <script src="script.js"></script>
+    <script src="JavaScript/script.js"></script>
   </body>
 </html>
 
@@ -162,16 +171,19 @@
     padding: 10px;
     height: 40px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 6px;
+    border: 3px solid #333;
+    box-shadow: 0 5px 0 #333;
     cursor: pointer;
     white-space: nowrap;
     margin-left: 10px;
+    transition: 0.3s;
+    font-weight: bold;
   }
 
   /* ボタン押下メッセージ */
   #copyMessage,
   #resetMessage,
-  #restoreMessage,
   #decodeMessage {
     margin-top: 10px;
     display: none;
@@ -192,6 +204,8 @@
   /* ボタンマウスオーバー関連Style */
   button:hover {
     background-color: #a7b8dd;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #333;
   }
 
   button:disabled {
@@ -201,6 +215,8 @@
 
   #resetButton:hover:enabled {
     background-color: #c15c79;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #333;
   }
 
   /* コピー/リセット/デコードボタンの位置Style */
