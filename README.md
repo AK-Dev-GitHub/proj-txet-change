@@ -1,7 +1,7 @@
 # 👻🖥 Service Image
 ![image](https://github.com/user-attachments/assets/aaa80b21-ce02-4d88-9fe1-501e299063f2)
 
-# ⚙️ Development Environment
+# 👻⚙️ Development Environment
 - JS
 - HTML
 - CSS
