@@ -16,19 +16,13 @@
         class="header-logo"
       />
       <span class="header-version">Ver.2.0.2</span>
-
-      <!-- ハンバーガーメニューアイコン (モバイル用) -->
       <div class="menu-icon" onclick="toggleMobileMenu()">☰</div>
-
-      <!-- 通常のリンク (デスクトップ用) -->
       <div class="header-links">
         <a href="index.html"> ホーム </a>
         <a href="about.html"> 使い方 </a>
         <a href="x-post.html"> ポスト一覧 </a>
       </div>
-
       <div class="header-icons">
-        <!-- アイコンリンク群 -->
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -54,33 +48,27 @@
           />
         </a>
       </div>
-
-      <!-- モバイル用メニュー -->
       <div class="header-links-mobile">
         <a href="index.html"> ホーム </a>
         <a href="about.html"> 使い方 </a>
         <a href="x-post.html"> ポスト一覧 </a>
+        <a href="https://github.com/AK-Dev-GitHub/proj-txet-change"> GitHub </a>
+        <a href="https://zenn.dev/milk_code"> Zenn </a>
       </div>
     </header>
 
     <div class="content">
-      <!-- 画像と説明を含むセクション -->
       <div class="image-section">
-        <!-- 画像1 -->
         <div class="image-container">
           <img src="icon/about-page-imgs/girl1.png" class="input-image" />
           <h3>Step1</h3>
           <p>文字を入力して、生成ボタンを押してみましょう</p>
         </div>
-
-        <!-- 画像2 -->
         <div class="image-container">
           <img src="icon/about-page-imgs/girl2.png" class="input-image" />
           <h3>Step2</h3>
           <p>文字化けが出力されるのでペットと一緒に見守りましょう</p>
         </div>
-
-        <!-- 画像3 -->
         <div class="image-container">
           <img src="icon/about-page-imgs/girl3.png" class="input-image" />
           <h3>Step3</h3>
@@ -89,10 +77,10 @@
       </div>
     </div>
 
-    <!-- フッターエリア -->
     <footer class="footer">
       &copy; 2024 みんなのもじばけ. All Rights Reserved.
     </footer>
+
     <script src="JavaScript/headerUnderLine.js"></script>
     <script src="JavaScript/xPost.js"></script>
     <script>
@@ -103,21 +91,21 @@
       }
     </script>
   </body>
+
   <style>
-    /* contentエリアにpaddingを追加して、headerとfooterに被らないようにする */
+    /* ヘッダーと重ならないように上部に余白を追加 */
     .content {
-      padding-top: 120px; /* ヘッダーの高さ分を考慮して余白を増加 */
-      padding-bottom: 100px; /* フッターの高さ分の余白 */
+      padding-top: 150px; /* ヘッダーの高さを考慮して余白を増加 */
+      padding-bottom: 100px;
       text-align: center;
-      min-height: 100vh; /* ビューポート全体の高さをカバー */
+      min-height: 100vh;
     }
 
-    /* 画像と説明文のレイアウトを調整するセクション */
     .image-section {
       display: flex;
-      flex-wrap: wrap; /* 画面サイズに応じて画像が折り返されるようにする */
-      justify-content: center; /* 画像を中央に配置 */
-      gap: 140px; /* 画像間のスペースを調整 */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* 画像間のスペースを小さめに */
       margin: 20px auto;
     }
 
@@ -126,30 +114,27 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      width: 30%; /* コンテナの幅を調整 */
-      max-width: 280px; /* 最大幅を設定して画像が大きくなりすぎないようにする */
-      margin-top: 100px;
+      width: 100%;
+      max-width: 280px;
+      margin-top: 20px;
     }
 
-    /* 画像サイズを調整 */
     .input-image {
       width: 100%;
-      max-width: 220px; /* 画像の最大幅を設定 */
-      max-height: 220px; /* 画像の最大高さを設定 */
-      object-fit: contain; /* 画像のアスペクト比を維持 */
-      margin-bottom: 15px; /* 画像とテキスト間に余白を追加 */
+      max-width: 220px;
+      max-height: 220px;
+      object-fit: contain;
+      margin-bottom: 15px;
     }
 
-    /* h3要素のスタイル */
     h3 {
-      font-size: 1.8vw; /* ビューポート幅に応じたフォントサイズ */
+      font-size: 1.6em;
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
-    /* p要素のスタイル */
     p {
-      font-size: 1.5vw; /* ビューポート幅に応じたフォントサイズ */
+      font-size: 1em;
       color: #666;
       margin: 0;
     }
@@ -157,53 +142,36 @@
     /* タブレットサイズ用のレイアウト調整 */
     @media (max-width: 1024px) {
       .image-container {
-        width: 40%;
-      }
-
-      .input-image {
-        max-width: 200px; /* 画像サイズを縮小 */
-      }
-
-      h3 {
-        font-size: 18px;
-      }
-
-      p {
-        font-size: 14px;
+        width: 45%;
       }
     }
 
     /* モバイルデバイス用のレイアウト調整 */
     @media (max-width: 768px) {
       .image-container {
-        width: 45%; /* モバイル画面用に幅を調整 */
+        width: 90%;
       }
-
       h3 {
-        font-size: 16px;
+        font-size: 1.4em;
       }
-
       p {
-        font-size: 13px;
+        font-size: 0.9em;
       }
     }
 
-    /* 非常に小さい画面（スマホサイズ）用の調整 */
+    /* スマートフォンサイズ用のレイアウト調整 */
     @media (max-width: 480px) {
       .image-container {
-        width: 100%; /* 画像を1列に表示する */
+        width: 100%;
       }
-
       .input-image {
-        max-width: 180px; /* スマホ画面用に画像サイズをさらに縮小 */
+        max-width: 180px;
       }
-
       h3 {
-        font-size: 14px;
+        font-size: 1.2em;
       }
-
       p {
-        font-size: 12px;
+        font-size: 0.85em;
       }
     }
   </style>
