@@ -25,25 +25,25 @@ header {
 }
 
 .header-logo {
-  margin-right: 15px; /* バージョンとロゴの間のスペース */
+  margin-right: 15px;
   width: 200px;
 }
 
 .header-version {
-  margin-right: auto; /* 右寄せしてリンクとの間隔を作成 */
+  margin-right: auto;
   font-size: 16px;
   color: #ae76a6;
 }
 
 .header-links {
   display: flex;
-  gap: 15px; /* リンク間のスペースを調整 */
-  margin-right: 30px; /* リンクとアイコンの間のスペース */
+  gap: 15px;
+  margin-right: 30px;
 }
 
 .header-icons {
   display: flex;
-  gap: 10px; /* アイコン間のスペースを調整 */
+  gap: 10px;
 }
 
 /* アイコンとリンクのスタイル */
@@ -51,6 +51,56 @@ header {
 .x-icon {
   width: 30px;
   height: 30px;
+}
+
+/* ハンバーガーメニューアイコン */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* モバイルメニュー */
+.header-links-mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.header-links-mobile a {
+  padding: 10px;
+  text-align: left;
+  color: #5d7dc0;
+  text-decoration: none;
+}
+
+/* モバイル用スタイル */
+@media (max-width: 600px) {
+  .header-links,
+  .header-icons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .header-logo {
+    width: 150px;
+  }
+
+  .header-version {
+    font-size: 14px;
+  }
 }
 
 .x-icon {

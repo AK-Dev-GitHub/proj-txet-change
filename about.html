@@ -16,13 +16,19 @@
         class="header-logo"
       />
       <span class="header-version">Ver.2.0.2</span>
+
+      <!-- ハンバーガーメニューアイコン (モバイル用) -->
+      <div class="menu-icon" onclick="toggleMobileMenu()">☰</div>
+
+      <!-- 通常のリンク (デスクトップ用) -->
       <div class="header-links">
         <a href="index.html"> ホーム </a>
         <a href="about.html"> 使い方 </a>
         <a href="x-post.html"> ポスト一覧 </a>
       </div>
+
       <div class="header-icons">
-        <!-- GitHubアイコン -->
+        <!-- アイコンリンク群 -->
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -33,7 +39,6 @@
             class="header-icon"
           />
         </a>
-        <!-- Zennアイコン -->
         <a href="https://zenn.dev/milk_code" target="_blank">
           <img
             src="icon/header-icons/Zenn.svg"
@@ -41,7 +46,6 @@
             class="header-icon"
           />
         </a>
-        <!-- Xアイコン -->
         <a id="twitterLink" href="#">
           <img
             src="icon/header-icons/X-icon.png"
@@ -49,6 +53,13 @@
             class="x-icon"
           />
         </a>
+      </div>
+
+      <!-- モバイル用メニュー -->
+      <div class="header-links-mobile">
+        <a href="index.html"> ホーム </a>
+        <a href="about.html"> 使い方 </a>
+        <a href="x-post.html"> ポスト一覧 </a>
       </div>
     </header>
 
@@ -80,10 +91,17 @@
 
     <!-- フッターエリア -->
     <footer class="footer">
-      &copy; 2024 みんなの文字化け. All Rights Reserved.
+      &copy; 2024 みんなのもじばけ. All Rights Reserved.
     </footer>
     <script src="JavaScript/headerUnderLine.js"></script>
     <script src="JavaScript/xPost.js"></script>
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.querySelector('.header-links-mobile');
+        mobileMenu.style.display =
+          mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+      }
+    </script>
   </body>
   <style>
     /* contentエリアにpaddingを追加して、headerとfooterに被らないようにする */
