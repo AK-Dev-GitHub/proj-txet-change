@@ -1,6 +1,7 @@
+# 🖥 Service Image
 ![image](https://github.com/user-attachments/assets/d60914a4-f7a5-4a50-911a-3acc4e369deb)
 
-# ⚙️ 開発環境
+# ⚙️ Development Environment
 - JS
 - HTML
 - CSS
@@ -9,14 +10,13 @@
 - VSCode（Visual Studio Code）
 
 
-# 📗 関連記事
+# 📗 Related Articles
  [GitHub Pagesで静的サイトをデプロイする](https://zenn.dev/comsize_press/articles/42f8f9f978a6ef)
- 
 
 
 # 🌐 APP URL
  [みんなのもじばけ](https://minna-no-mojibake.com/)
  
 
-# 👷 Author
-- [Zenn](https://zenn.dev/)
+# 👷 Author Profile
+- [Zenn Account](https://zenn.dev/)
