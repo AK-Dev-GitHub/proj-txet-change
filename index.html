@@ -11,14 +11,18 @@
     <!--headerエリア -->
     <header>
       <img
-        src="icon/MainLogo.png"
+        src="icon/header-icons/MainLogo.png"
         alt="文字化けジェネレータ ロゴ"
         class="header-logo"
       />
-      <div class="header-icons">
-        <span class="header-version">Ver.2.0.2</span>
+      <span class="header-version">Ver.2.0.2</span>
+      <div class="header-links">
+        <a href="index.html"> ホーム </a>
         <a href="about.html"> 使い方 </a>
         <a href="x-post.html"> みんなの文字化け </a>
+      </div>
+      <div class="header-icons">
+        <!-- GitHubアイコン -->
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -29,6 +33,7 @@
             class="header-icon"
           />
         </a>
+        <!-- Zennアイコン -->
         <a href="https://zenn.dev/milk_code" target="_blank">
           <img
             src="icon/header-icons/Zenn.svg"
@@ -36,7 +41,7 @@
             class="header-icon"
           />
         </a>
-
+        <!-- Xアイコン -->
         <a id="twitterLink" href="#">
           <img
             src="icon/header-icons/X-icon.png"
@@ -46,32 +51,6 @@
         </a>
       </div>
     </header>
-
-    <!-- 背景文字エリア -->
-    <div
-      class="background-text"
-      style="top: 10%; left: 20%; animation-delay: 0s"
-    >
-      繧ゅ§縺ｰ縺🥺ｒ繧医�縲
-    </div>
-    <div
-      class="background-text"
-      style="top: 30%; left: 40%; animation-delay: 2s"
-    >
-      縺ゅ🥺縺ｰ縺代ｒ繧医�縲
-    </div>
-    <div
-      class="background-text"
-      style="top: 50%; left: 60%; animation-delay: 4s"
-    >
-      繧ゅ§縺ｰ縺代ｒ繧🥺�縲
-    </div>
-    <div
-      class="background-text"
-      style="top: 70%; left: 80%; animation-delay: 6s"
-    >
-      繧ゅ§縺ｰ縺代ｒ繧医�縲
-    </div>
 
     <!-- 文字化け生成カード -->
     <div class="container">
@@ -107,9 +86,13 @@
     </div>
     <!-- フッターエリア -->
     <footer class="footer">
-      &copy; 2024 Mojibake Generator. All Rights Reserved.
+      &copy; 2024 みんなの文字化け. All Rights Reserved.
     </footer>
     <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/headerUnderLine.js"></script>
+    <script src="JavaScript/decode.js"></script>
+    <script src="JavaScript/xPost.js"></script>
+    <script src="JavaScript/createCharacters.js"></script>
   </body>
 </html>
 
@@ -119,13 +102,13 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     text-align: center;
     z-index: 1;
     box-sizing: border-box;
-    margin-top: 100px; /* ヘッダーとの重なりを防ぐ */
+    margin-top: 40px; /* ヘッダーとの重なりを防ぐ */
   }
 
   /* 文字化け生成入力エリア */

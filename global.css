@@ -1,6 +1,5 @@
 /* 背景 */
 body {
-  font-family: Arial, sans-serif;
   background-color: #e9ecf5;
   display: flex;
   justify-content: center;
@@ -26,23 +25,30 @@ header {
 }
 
 .header-logo {
-  margin-left: 15px;
-  width: 280px;
-  height: 30px;
+  margin-right: 15px; /* バージョンとロゴの間のスペース */
+  width: 200px;
 }
 
 .header-version {
+  margin-right: auto; /* 右寄せしてリンクとの間隔を作成 */
   font-size: 16px;
-  color: #333;
+  color: #ae76a6;
+}
+
+.header-links {
+  display: flex;
+  gap: 15px; /* リンク間のスペースを調整 */
+  margin-right: 30px; /* リンクとアイコンの間のスペース */
 }
 
 .header-icons {
   display: flex;
-  align-items: center;
-  gap: 10px; /* アイコン間の間隔を調整 */
+  gap: 10px; /* アイコン間のスペースを調整 */
 }
 
-.header-icon {
+/* アイコンとリンクのスタイル */
+.header-icon,
+.x-icon {
   width: 30px;
   height: 30px;
 }
@@ -89,41 +95,10 @@ a:hover {
   text-decoration: underline;
 }
 
-@keyframes float {
-  0% {
-    transform: translate(-50%, -50%) rotate(-45deg) translateY(-100%);
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(-45deg) translateY(100%);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-45deg) translateY(-100%);
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 90%;
-  }
-
-  .input-group {
-    flex-direction: column;
-  }
-
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .button-group {
-    flex-direction: column;
-  }
-
-  .button-group button {
-    margin: 5px 0;
-  }
+/* activeクラスにアンダーラインを引く */
+a.active {
+  border-bottom: 2px solid #ae76a6; /* アンダーラインの代わりにボーダーを使う */
+  padding-bottom: 3px; /* テキストとアンダーラインの間に余白を作成 */
+  font-weight: bold; /* 必要であれば文字を強調 */
+  color: #ae76a6;
 }

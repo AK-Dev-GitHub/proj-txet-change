@@ -8,17 +8,21 @@
     <link rel="icon" href="icon/favicon.ico" />
   </head>
   <body>
+    <!--headerエリア -->
     <header>
       <img
-        src="icon/MainLogo.png"
+        src="icon/header-icons/MainLogo.png"
         alt="文字化けジェネレータ ロゴ"
         class="header-logo"
       />
-      <div class="header-icons">
-        <span class="header-version">Ver.2.0.2</span>
+      <span class="header-version">Ver.2.0.2</span>
+      <div class="header-links">
         <a href="index.html"> ホーム </a>
         <a href="about.html"> 使い方 </a>
-
+        <a href="x-post.html"> みんなの文字化け </a>
+      </div>
+      <div class="header-icons">
+        <!-- GitHubアイコン -->
         <a
           href="https://github.com/AK-Dev-GitHub/proj-txet-change"
           target="_blank"
@@ -29,6 +33,7 @@
             class="header-icon"
           />
         </a>
+        <!-- Zennアイコン -->
         <a href="https://zenn.dev/milk_code" target="_blank">
           <img
             src="icon/header-icons/Zenn.svg"
@@ -36,7 +41,7 @@
             class="header-icon"
           />
         </a>
-
+        <!-- Xアイコン -->
         <a id="twitterLink" href="#">
           <img
             src="icon/header-icons/X-icon.png"
@@ -51,9 +56,10 @@
       <div id="postList" class="post-list"></div>
     </div>
     <footer class="footer">
-      &copy; 2024 Mojibake Generator. All Rights Reserved.
+      &copy; 2024 みんなの文字化け. All Rights Reserved.
     </footer>
     <script src="JavaScript/getTwitterPost.js"></script>
+    <script src="JavaScript/headerUnderLine.js"></script>
   </body>
   <style>
     /* レイアウト */
