@@ -5,7 +5,7 @@ const BEARER_TOKEN = 'YOUR_BEARER_TOKEN_HERE';
 const SEARCH_URL = 'https://api.twitter.com/2/tweets/search/recent';
 
 // 特定のURLを含むツイートを検索
-const urlPattern = /https:\/\/example\.com/; // 検索したいURLのパターン
+const urlPattern = minna - no - mojibake.com; // 検索したいURLのパターン
 const maxPosts = 10; // 最大表示件数
 const postList = document.getElementById('postList');
 
