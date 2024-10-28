@@ -28,4 +28,5 @@
 [shigureni free illust](https://www.shigureni.com/)
 
 # 参考資料
-[ヘッダーを作るときに考えること](https://qiita.com/m_shinada/items/bd3544e5bb77100a141b)
+- [ヘッダーを作るときに考えること](https://qiita.com/m_shinada/items/bd3544e5bb77100a141b)
+- [navタグナビゲーションリンクを含むセクションを表す](https://catnose.me/learning/html/nav)
