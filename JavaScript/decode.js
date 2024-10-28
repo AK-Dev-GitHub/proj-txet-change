@@ -2,7 +2,7 @@ decodeButton.addEventListener('click', () => {
   const outputText = document.getElementById('outputText').textContent;
 
   // モーダルを表示
-  const modal = document.getElementById('modal');
+  const modal = document.getElementById('show-modal');
   modal.style.display = 'block';
 
   // モーダルの閉じるボタン
@@ -12,7 +12,7 @@ decodeButton.addEventListener('click', () => {
   };
 
   // OKボタンをクリックしたときの処理
-  const okButton = document.getElementById('okButton');
+  const okButton = document.getElementById('click-ok-button');
   okButton.onclick = function () {
     const decodedText = decodeMojibake(outputText);
     document.getElementById('outputText').textContent = decodedText;

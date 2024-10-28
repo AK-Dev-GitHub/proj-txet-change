@@ -89,12 +89,12 @@
       <div id="decodeMessage">解読しました！</div>
     </div>
 
-    <!-- エンコード情報モーダル -->
-    <div id="modal" class="modal">
+    <!-- デコード情報モーダル -->
+    <div id="show-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Shift_JISとしてデコードします</h2>
-        <button id="okButton">OK</button>
+        <button id="click-ok-button" class="ok-button">OK</button>
       </div>
     </div>
 
@@ -180,6 +180,23 @@
     box-shadow: 0 5px 0 #333;
     cursor: pointer;
     white-space: nowrap;
+    margin-left: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+
+  .ok-button {
+    background-color: #5d7dc0;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 3px solid #333;
+    box-shadow: 0 5px 0 #333;
+    cursor: pointer;
     margin-left: 10px;
     transition: 0.3s;
     font-weight: bold;
