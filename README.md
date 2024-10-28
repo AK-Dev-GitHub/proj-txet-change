@@ -26,3 +26,6 @@
 
 # 👻👧 Images
 [shigureni free illust](https://www.shigureni.com/)
+
+# 参考資料
+[ヘッダーを作るときに考えること](https://qiita.com/m_shinada/items/bd3544e5bb77100a141b)
