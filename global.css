@@ -25,18 +25,21 @@ header {
 }
 
 .main-title {
+  font-family: 'Hachi Maru Pop', cursive;
   margin-right: 15px;
   margin-left: 15px;
   font-size: 30px;
 }
 
 .header-version {
+  font-family: 'Hachi Maru Pop', cursive;
   margin-right: auto;
   font-size: 16px;
   color: #ae76a6;
 }
 
 .header-links {
+  font-family: 'Hachi Maru Pop', cursive;
   display: flex;
   gap: 15px;
   margin-right: 30px;
