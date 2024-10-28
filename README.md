@@ -21,8 +21,8 @@
 # 👻👷 Author Profile
 - [Zenn Account](https://zenn.dev/)
 
-# 👻🖊 FONT
+# 👻🖊 Font
 [はちまるポップ](https://sankoufont.com/japanese-font/hachimarupop/)
 
-# 👻👧 Imags
+# 👻👧 Images
 [shigureni free illust](https://www.shigureni.com/)
