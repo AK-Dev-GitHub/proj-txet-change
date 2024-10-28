@@ -118,17 +118,18 @@
   </body>
   <style>
     /* FAQセクションのスタイル */
-
-    .faq-title {
-      font-size: 40px;
-      margin: 20px;
-      text-align: center;
-    }
     .faq-section {
       margin: 20px;
       text-align: center;
       overflow-y: auto;
       padding-bottom: 20px;
+      overflow-y: auto; /* スクロールを可能にする */
+      /* flex-grow: 1;  画面の余白を消すStyle-+*/
+    }
+    .faq-title {
+      font-size: 40px;
+      margin: 20px;
+      text-align: center;
     }
     .faq-item {
       margin-bottom: 20px;
@@ -146,32 +147,23 @@
       width: 40px;
       height: 40px;
     }
-    /* デスクトップ時にQとAのテキストを中央揃え */
-    @media (min-width: 768px) {
-      .faq-title {
-        font-size: 40px;
-        margin: 20px;
-        text-align: center;
-      }
+    /* スマホでのスタイル調整 */
+    @media (max-width: 767px) {
       .faq-section {
-        text-align: center;
+        margin: 10px; /* スマホ時のマージンを減少 */
       }
 
       .faq-item {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #ccc;
+        padding: 5px 0; /* スマホ時の上下パディングを減少 */
       }
+
       .faq-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin: 10px 0;
-        font-size: 40px;
+        font-size: 16px; /* スマホ時のフォントサイズを減少 */
       }
+
       .faq-icon {
-        width: 40px;
-        height: 40px;
+        width: 25px; /* スマホ時のアイコン幅を減少 */
+        height: 25px; /* スマホ時のアイコン高さを減少 */
       }
     }
   </style>
