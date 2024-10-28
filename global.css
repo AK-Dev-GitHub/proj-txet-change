@@ -24,9 +24,10 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-logo {
+.main-title {
   margin-right: 15px;
-  width: 200px;
+  margin-left: 15px;
+  font-size: 30px;
 }
 
 .header-version {
