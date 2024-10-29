@@ -18,7 +18,7 @@
     <!-- headerエリア -->
     <header>
       <span class="main-title">みんなのもじばけ</span>
-      <span class="header-version">Ver.2.0.2</span>
+      <span class="header-version">Ver.3.0.0</span>
 
       <!-- ハンバーガーメニューアイコン (モバイル用) -->
       <div class="menu-icon" onclick="toggleMobileMenu()">☰</div>
@@ -109,7 +109,7 @@
 
     <!-- フッターエリア -->
     <footer class="footer">
-      &copy; 2024 みんなのもじばけ. All Rights Reserved.
+      <nobr>&copy; 2024 みんなのもじばけ</nobr>
     </footer>
 
     <script src="JavaScript/getXPost.js"></script>
@@ -125,14 +125,13 @@
   <style>
     /* FAQセクションのスタイル */
     .faq-section {
-      margin: 20px;
-      text-align: center;
-      overflow-y: auto;
-      padding-bottom: 20px;
       margin-top: 100px;
-      overflow-y: auto; /* スクロールを可能にする */
-      /* flex-grow: 1;  画面の余白を消すStyle-+*/
+      padding-top: 10px; /* ヘッダーと重ならないように調整 */
+      padding-bottom: 60px; /* フッターと重ならないように調整 */
+      text-align: center;
+      z-index: 1;
     }
+
     .faq-title {
       font-size: 40px;
       margin: 20px;
@@ -149,17 +148,19 @@
       align-items: center;
       gap: 10px;
       margin: 10px 0;
-      font-size: 40px;
+      font-size: 20px;
       font-family: 'Hachi Maru Pop', cursive;
     }
     .faq-icon {
       width: 90px;
       height: 90px;
     }
-    /* スマホでのスタイル調整 */
+    /* スマホ用のFAQセクション調整 */
     @media (max-width: 767px) {
       .faq-section {
         margin: 10px; /* スマホ時のマージンを減少 */
+        padding-top: 120px; /* ヘッダーと重ならないように上部パディングを調整 */
+        padding-bottom: 50px; /* フッターと重ならないように下部パディングを調整 */
       }
 
       .faq-item {
@@ -168,7 +169,6 @@
 
       .faq-row {
         font-size: 16px; /* スマホ時のフォントサイズを減少 */
-        font-family: 'Hachi Maru Pop', cursive;
       }
 
       .faq-icon {

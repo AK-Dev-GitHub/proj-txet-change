@@ -10,7 +10,7 @@ body {
   position: relative;
 }
 
-/* headerエリア */
+/* ヘッダーエリア */
 header {
   position: fixed;
   top: 0;
@@ -24,35 +24,51 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* メインタイトルのスタイル */
 .main-title {
   font-family: 'Hachi Maru Pop', cursive;
   margin-right: 15px;
   margin-left: 15px;
-  font-size: 30px;
+  font-size: 25px;
+  flex-wrap: nowrap;
 }
 
+/* ヘッダーバージョン情報 */
 .header-version {
   font-family: 'Hachi Maru Pop', cursive;
   margin-right: auto;
-  font-size: 16px;
+  font-size: 15px;
   color: #ae76a6;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 
+/* ヘッダーのリンク */
 .header-links {
-  font-family: 'Hachi Maru Pop', cursive;
   display: flex;
   gap: 15px;
   margin-right: 30px;
 }
 
+/* ヘッダーアイコン */
 .header-icons {
   display: flex;
   gap: 10px;
+  flex-wrap: nowrap;
 }
 
 /* アイコンとリンクのスタイル */
 .header-icon,
 .x-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.x-icon {
+  /* xアイコンの左端予約を作るために定義 */
+  margin-right: 20px;
   width: 30px;
   height: 30px;
 }
@@ -88,7 +104,7 @@ header {
   text-decoration: none;
 }
 
-/* モバイル用スタイル */
+/* モバイル用のheaderレスポンシブスタイル */
 @media (max-width: 600px) {
   .header-links,
   .header-icons {
@@ -106,13 +122,6 @@ header {
   .header-version {
     font-size: 14px;
   }
-}
-
-.x-icon {
-  /* xアイコンの左端予約を作るために定義 */
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
 }
 
 /* 背景文字のStyle */
