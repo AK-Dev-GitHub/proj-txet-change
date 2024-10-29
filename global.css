@@ -81,7 +81,7 @@ header {
   color: #ae76a6;
 }
 
-/* モバイルメニュー */
+/* モバイルメニューモーダル */
 .header-links-mobile {
   display: none;
   flex-direction: column;
@@ -93,9 +93,15 @@ header {
   width: 200px;
   padding: 10px;
   border: 1px solid #333;
-  box-shadow: 0 0 10px #333;
+  box-shadow: 0 0 10px #ae76a6;
   z-index: 10;
   font-family: 'Hachi Maru Pop', cursive;
+}
+/* 'Xにポストする'リンクのスタイル */
+.header-links-mobile a#XLinkMobile {
+  border-bottom: none; /* ボーダーラインを適用しない */
+  text-decoration: none;
+  color: #5d7dc0;
 }
 /* モバイルメニューの閉じるボタン */
 .modal-close {
@@ -171,8 +177,9 @@ a:hover {
 
 /* activeクラスにアンダーラインを引く */
 a.active {
-  border-bottom: 2px solid #ae76a6; /* アンダーラインの代わりにボーダーを使う */
-  padding-bottom: 3px; /* テキストとアンダーラインの間に余白を作成 */
+  display: inline-block; /* ボーダーを文字列の幅に合わせる */
+  border-bottom: 2px solid #ae76a6; /* アンダーライン */
+  padding-bottom: 3px; /* テキストとアンダーラインの間に余白 */
   font-weight: bold; /* 必要であれば文字を強調 */
   color: #ae76a6;
 }
