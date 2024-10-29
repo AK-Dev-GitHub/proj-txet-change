@@ -129,22 +129,8 @@
       margin: 20px 0; /* 下部の余白を調整 */
     }
 
-    .input-image1 {
-      width: 100%;
-      max-width: 250px; /* デスクトップで画像を大きく */
-      max-height: 250px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
-    .input-image2 {
-      width: 100%;
-      max-width: 250px; /* デスクトップで画像を大きく */
-      max-height: 250px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
+    .input-image1,
+    .input-image2,
     .input-image3 {
       width: 100%;
       max-width: 250px; /* デスクトップで画像を大きく */
@@ -169,6 +155,9 @@
 
     /* タブレットサイズ用のレイアウト調整 */
     @media (max-width: 1024px) {
+      .image-section {
+        gap: 80px; /* タブレットで余白を調整 */
+      }
       .image-container {
         width: 45%;
         margin-bottom: 20px;
@@ -177,24 +166,21 @@
 
     /* スマートフォンサイズ用のレイアウト調整 */
     @media (max-width: 480px) {
+      .image-section {
+        gap: 30px; /* スマートフォンで各コンテナ間の余白を縮小 */
+        flex-direction: column;
+        align-items: center;
+      }
       .image-container {
         width: 100%;
-        margin-top: 50px;
+        margin: 30px 0; /* スマートフォン用の上下余白を調整 */
       }
-      .input-image1 {
-        max-width: 200px;
-        margin-top: 730px;
-      }
-      .input-image2 {
-        max-width: 200px;
-      }
+      .input-image1,
+      .input-image2,
       .input-image3 {
         max-width: 200px;
       }
-      /* .image-section {
-        gap: 150px; /* 各画像間の余白 */
-      /* } */
-      * h3 {
+      h3 {
         font-size: 1.4em;
         font-family: 'Hachi Maru Pop', cursive;
       }
