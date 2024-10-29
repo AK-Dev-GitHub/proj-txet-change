@@ -95,6 +95,15 @@ header {
   border: 1px solid #333;
   box-shadow: 0 0 10px #333;
   z-index: 10;
+  font-family: 'Hachi Maru Pop', cursive;
+}
+/* モバイルメニューの閉じるボタン */
+.modal-close {
+  padding: 10px;
+  text-align: left;
+  color: #5d7dc0;
+  text-decoration: none;
+  font-family: 'Hachi Maru Pop', cursive;
 }
 
 .header-links-mobile a {

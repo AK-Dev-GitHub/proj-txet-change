@@ -59,7 +59,6 @@
           />
         </a>
       </div>
-
       <!-- モバイル用メニュー -->
       <div class="header-links-mobile">
         <a href="index.html"> ホーム </a>
@@ -67,6 +66,8 @@
         <a href="question.html"> よくある質問 </a>
         <a href="https://github.com/AK-Dev-GitHub/proj-txet-change"> GitHub </a>
         <a href="https://zenn.dev/milk_code"> Zenn </a>
+        <a id="XLinkMobile" href="#"> Xにポストする </a>
+        <a id="closeMobileMenu" class="modal-close js-modal-close">閉じる</a>
       </div>
     </header>
 
@@ -87,11 +88,11 @@
       <div class="faq-item">
         <div class="faq-row">
           <img src="icon/FAQ-icons/question.png" alt="Q:" class="faq-icon" />
-          <span>Q不具合見つけたんだけど....</span>
+          <span>Q 不具合見つけたんだけど....</span>
         </div>
         <div class="faq-row">
           <img src="icon/FAQ-icons/answer.png" alt="A:" class="faq-icon" />
-          <span>A フォームから不具合内容を送信たのむ～</span>
+          <span>A フォームから不具合内容を送信たのむ</span>
         </div>
       </div>
       <!-- 質問3 -->
@@ -114,21 +115,14 @@
 
     <script src="JavaScript/getXPost.js"></script>
     <script src="JavaScript/headerUnderLine.js"></script>
-    <script>
-      function toggleMobileMenu() {
-        const mobileMenu = document.querySelector('.header-links-mobile');
-        mobileMenu.style.display =
-          mobileMenu.style.display === 'flex' ? 'none' : 'flex';
-      }
-    </script>
+    <script src="JavaScript/modale.js"></script>
   </body>
   <style>
     /* FAQ要素を格納しているコンテナ */
     .faq-section {
-      text-align: center;
-      z-index: 1;
+      padding-top: 60px; /* ヘッダーと重ならないように上部パディングを調整 */
+      padding-bottom: 100px; /* フッターと重ならないように下部パディングを調整 */
     }
-    /* FAQセクションのスタイル */
     .faq-title {
       font-size: 40px;
       text-align: center;
@@ -136,15 +130,15 @@
     }
     /* 各QAの余白とボーダーライン */
     .faq-item {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 20px; /* ボーダーラインと各QAの上部間マージン */
+      padding-bottom: 20px; /* 各QAの下部とボーダーラインの間のパディング */
       border-bottom: 1px solid #ae76a6;
     }
     .faq-row {
-      display: flex;
+      display: flex; /* アイコンとテキストを横並びに */
       align-items: center;
-      gap: 10px;
-      margin: 10px 0;
+      gap: 10px; /* アイコンとテキストの間隔 */
+      margin: 10px 0; /* 各QAの上下マージン */
       font-size: 20px;
       font-family: 'Hachi Maru Pop', cursive;
     }
