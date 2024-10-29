@@ -21,7 +21,7 @@ header {
   align-items: center;
   padding: 10px 20px;
   z-index: 2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #ae76a6;
 }
 
 /* メインタイトルのスタイル */
@@ -37,7 +37,7 @@ header {
 .header-version {
   font-family: 'Hachi Maru Pop', cursive;
   margin-right: auto;
-  font-size: 15px;
+  font-size: 18px;
   color: #ae76a6;
   flex-wrap: nowrap;
   text-align: center;
