@@ -10,7 +10,6 @@
 - JS
 - HTML
 - CSS
-- X API
 - GitHub Pages
 - VSCode（Visual Studio Code）
 
