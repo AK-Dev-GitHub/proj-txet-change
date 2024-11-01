@@ -6,8 +6,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; スクロールバーを非表示にする */
   position: relative;
+  /* cursor: none; デフォルトのマウスカーソルを非表示にする */
 }
 
 /* ヘッダーエリア */
@@ -175,11 +176,49 @@ a:hover {
   text-decoration: underline;
 }
 
-/* activeクラスにアンダーラインを引く */
+/* activeページにアンダーラインを引く */
 a.active {
   display: inline-block; /* ボーダーを文字列の幅に合わせる */
   border-bottom: 2px solid #ae76a6; /* アンダーライン */
   padding-bottom: 3px; /* テキストとアンダーラインの間に余白 */
   font-weight: bold; /* 必要であれば文字を強調 */
   color: #ae76a6;
+}
+
+/* マウスカーソルStyle */
+#cursor {
+  pointer-events: none;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 1);
+  transform: translate(-100px, -100px);
+  border-radius: 50%;
+  z-index: 999;
+}
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -16px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+  background: #ae76a6;
+  border-radius: 50%;
+  transform: translate(-100px, -100px);
+  transition: transform 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 998;
+}
+
+/* hover時に円を拡大 */
+#stalker.hov_ {
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  transition: 0.15s;
+  background: rgba(253, 254, 0, 0.5);
 }
