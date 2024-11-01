@@ -8,7 +8,7 @@ body {
   margin: 0;
   /* overflow: hidden; スクロールバーを非表示にする */
   position: relative;
-  /* cursor: none; デフォルトのマウスカーソルを非表示にする */
+  cursor: none; /* デフォルトのマウスカーソルを非表示にする */
 }
 
 /* ヘッダーエリア */
@@ -207,9 +207,9 @@ a.active {
   height: 32px;
   background: #ae76a6;
   border-radius: 50%;
-  transform: translate(-100px, -100px);
-  transition: transform 0.2s;
-  transition-timing-function: ease-out;
+  transform: translate(-100px, -100px); /* マウスカーソルの初期位置 */
+  transition: transform 0.1s; /* マウスカーソルの移動に伴うアニメーション */
+  transition-timing-function: ease-out; /* アニメーションのタイミングを調整 */
   z-index: 998;
 }
 
